@@ -1,5 +1,5 @@
 
-const StepperControl = ({ handleClick }) => {
+const StepperControl = ({ handleClick, steps }) => {
   return (
     <div>
         <button
@@ -9,7 +9,7 @@ const StepperControl = ({ handleClick }) => {
             Back
         </button>
         <button
-        onClick={() => handleClick("next")}
+        onClick={() => handleClick('next')}
         className=""
         >
             Next
