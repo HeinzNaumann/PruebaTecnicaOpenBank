@@ -2,8 +2,6 @@
 import PropTypes from 'prop-types'
 
 const StepperControl = ({ handleClick, steps, currentStep }) => {
-  console.log(steps.length - 1)
-  console.log(currentStep)
   return (
     <div>
         <button
@@ -26,6 +24,6 @@ export default StepperControl
 
 StepperControl.propTypes = {
   handleClick: PropTypes.func,
-  steps: PropTypes.number,
+  steps: PropTypes.array,
   currentStep: PropTypes.number
 }
