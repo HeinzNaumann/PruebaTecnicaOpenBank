@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.scss'
 import Logo from './assets/img/logo_openbank.png'
+import Stepper from './components/Stepper'
 import StepperControl from './components/StepperControl'
 import Step1 from './components/steps/Step1'
 import Step2 from './components/steps/Step2'
@@ -41,6 +42,10 @@ function App () {
       </header>
       <main>
         <div className="App-content">
+        <Stepper steps={steps} currentStep={currentStep} />
+          <div>
+            {displayStep(currentStep)}
+          </div>
           <p>Probando</p>
           <StepperControl
           handleClick={handleClick}
