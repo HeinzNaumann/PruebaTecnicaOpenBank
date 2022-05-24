@@ -1,13 +1,18 @@
-import { useState } from 'react'
+
 import './App.scss'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import Logo from './assets/img/logo_openbank.png'
+function App () {
   return (
-    <div className="App-content">
-      <p> Probando</p>
-    </div>
+    <>
+      <header>
+        <img src={Logo} alt="Logo OpenBank" height="200px " width="400px" />
+      </header>
+      <main>
+        <div className="App-content">
+          <p> Probando</p>
+        </div>
+      </main>
+    </>
   )
 }
 
