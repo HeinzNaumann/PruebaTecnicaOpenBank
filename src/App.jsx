@@ -40,7 +40,7 @@ function App () {
       <header>
         <img src={Logo} alt="Logo OpenBank" height="27px" width="147px" />
       </header>
-      <main>
+      <main >
         <div className="App-content">
         <Stepper steps={steps} currentStep={currentStep} />
           <div>

@@ -1,6 +1,5 @@
 
 import PropTypes from 'prop-types'
-
 const StepperControl = ({ handleClick, steps, currentStep }) => {
   return (
     <div>

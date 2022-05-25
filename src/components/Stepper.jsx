@@ -1,6 +1,7 @@
 
 import PropTypes from 'prop-types'
 import { useEffect, useRef, useState } from 'react'
+import '../styles/Stepper.scss'
 const Stepper = ({ steps, currentStep }) => {
   const [newStep, setNewStep] = useState([])
   const stepsRef = useRef()
@@ -55,8 +56,56 @@ const Stepper = ({ steps, currentStep }) => {
     setNewStep(current)
   }, [steps, currentStep])
 
+  console.log(newStep)
+
+  const stepsDisplay = newStep.map((step, index) => {
+    return (
+      <div
+        key={index}
+        className={
+          index !== newStep.length - 1
+            ? 'stepper-content-full'
+            : 'stepper-content'
+        }
+      >
+        <div className="stepper-content-inside">
+          <div
+            className={`stepper-circle-effect ${
+              step.selected
+                ? 'stepper-circle-effect-selected'
+                : ''
+            }`}
+          >
+            {
+            step.completed
+              ? (
+                  <span className='stepper-completed'>&#10003;</span>
+                )
+              : (
+                  index + 1
+                )}
+          </div>
+          <div
+            className={`stepper-highlighted ${
+              step.highlighted ? 'stepper-highlighted-true' : 'stepper-highlighted-false'
+            }`}
+          >
+            {step.description}
+          </div>
+        </div>
+        <div
+          className={`stepper-completed  ${
+            step.completed ? 'stepper-completed-true' : 'stepper-completed-false'
+          }  `}
+        ></div>
+      </div>
+    )
+  })
+
   return (
-    <div></div>
+    <div className="stepper">
+      {stepsDisplay}
+    </div>
   )
 }
 

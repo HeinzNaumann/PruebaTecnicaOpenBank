@@ -15,6 +15,15 @@
     p{
       color: $secondary-color;
     }
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    margin: 0 auto;
+    max-width: 800px;
+    justify-content: space-around;
+ 
+
+
     .bye-bye{
       margin: 4rem 0 0;
       text-align: center;
