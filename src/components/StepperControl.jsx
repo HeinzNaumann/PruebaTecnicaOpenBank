@@ -1,19 +1,23 @@
 
 import PropTypes from 'prop-types'
-const StepperControl = ({ handleClick, steps, currentStep }) => {
+import '../styles/StepperControl.scss'
+const StepperControl = ({ handleClick, steps, currentStep, age }) => {
   return (
-    <div>
+    <div className='stepperControl-container'>
         <button
         onClick={() => handleClick()}
-        className=""
+        className={`${
+          currentStep === 1 ? 'disabled' : ''
+        }`}
         >
             Back
         </button>
         <button
-        onClick={() => handleClick('next')}
-        className=""
+        onClick={age === true ? () => handleClick('next') : () => handleClick()}
+        className={`${
+          age !== true ? 'disabled' : ''}`}
         >
-            {currentStep === steps.length - 1 ? 'Confirm' : 'Next'}
+            {currentStep === steps.length - 1 ? 'Confirm' : 'Next' }
         </button>
     </div>
   )
@@ -24,5 +28,6 @@ export default StepperControl
 StepperControl.propTypes = {
   handleClick: PropTypes.func,
   steps: PropTypes.array,
-  currentStep: PropTypes.number
+  currentStep: PropTypes.number,
+  age: PropTypes.bool
 }

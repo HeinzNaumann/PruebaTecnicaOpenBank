@@ -1,0 +1,18 @@
+@import "./base";
+
+
+
+.steps1 {
+    &-container{
+        position: relative;
+        width: 93%;
+        height: 50%;
+        display: flex;
+        margin: 0 auto;
+        padding: 10px 40px;
+        min-height: 500px;
+      
+    }
+  
+  }
+  

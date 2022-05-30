@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.scss'
+import './styles/Steps.scss'
 import Logo from './assets/img/logo_openbank.png'
 import Stepper from './components/Stepper'
 import StepperControl from './components/StepperControl'
@@ -8,6 +9,12 @@ import Step2 from './components/steps/Step2'
 import Step3 from './components/steps/Step3'
 
 function App () {
+  const [age, setAge] = useState(false)
+
+  const handleChange = () => {
+    setAge(!age)
+  }
+
   const [currentStep, setCurrentStep] = useState(1)
   const steps = [
     'New Password',
@@ -18,7 +25,7 @@ function App () {
   const displayStep = (step) => {
     switch (step) {
       case 1:
-        return <Step1 />
+        return <Step1 setConfirmAge={() => handleChange()} age={age}/>
       case 2:
         return <Step2 />
       case 3:
@@ -43,14 +50,14 @@ function App () {
       <main >
         <div className="App-content">
         <Stepper steps={steps} currentStep={currentStep} />
-          <div>
+          <div className='steps1-container'>
             {displayStep(currentStep)}
           </div>
-          <p>Probando</p>
           <StepperControl
           handleClick={handleClick}
           currentStep={currentStep}
           steps={steps}
+          age={age}
           />
         </div>
       </main>

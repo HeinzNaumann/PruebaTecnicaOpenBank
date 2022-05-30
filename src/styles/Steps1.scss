@@ -1,0 +1,23 @@
+@import "./base";
+
+
+
+.steps1 {
+    &-container{
+              
+        .icons-blocks{
+            justify-content: space-between;
+            align-self: center;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 40px 50px 39px 50px;
+        }
+        .checkbox{
+            display: flex;
+        }   
+    }
+  
+  }
+  
