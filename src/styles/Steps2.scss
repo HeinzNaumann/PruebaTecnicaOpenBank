@@ -2,21 +2,48 @@
 
 
 
-.steps1 {
+.steps {
     &-container{
-    
-        .icons-blocks{
-            justify-content: space-between;
-            align-self: center;
-            text-align: center;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin: 40px 50px 39px 50px;
+        .form-container{
+            width: 80%;
+            margin:0 auto;
+            .form-password{
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                width: 80%;
+                margin-top: 5rem;
+            }
+            label{
+                font-size: 0.8rem;
+                margin-bottom: 0.3rem;
+                margin-top: 2rem;
+            }
+            input{
+                height: 30px;
+                outline: none;
+            }
+            textarea{
+                outline: none;
+            }
+            .failures{
+                border: 0.5px solid red !important;
+                outline: 1px solid red;
+                background-color: #fff3f3 ;
+                opacity: 9;
+            }
+            .counter-container{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    .counter{
+                        font-size:0.8rem;
+                        justify-content: flex-end;
+                    }
+                }
+                
+            
         }
-        .checkbox{
-            display: flex;
-        }   
     }
   
   }

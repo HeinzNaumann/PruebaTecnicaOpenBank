@@ -56,8 +56,6 @@ const Stepper = ({ steps, currentStep }) => {
     setNewStep(current)
   }, [steps, currentStep])
 
-  console.log(newStep)
-
   const stepsDisplay = newStep.map((step, index) => {
     return (
       <div

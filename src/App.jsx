@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.scss'
 import './styles/Steps.scss'
 import Logo from './assets/img/logo_openbank.png'
@@ -9,10 +9,40 @@ import Step2 from './components/steps/Step2'
 import Step3 from './components/steps/Step3'
 
 function App () {
+  const [finalValidation, setFinalValidation] = useState()
+  useEffect(() =>
+    setFinalValidation(() => {
+      if (valueForm.password === valueForm.confirmPassword && valueForm.cluePassword.length > 1) {
+        return true
+      } else {
+        return false
+      }
+    })
+  )
+
+  // Step1
   const [age, setAge] = useState(false)
 
   const handleChange = () => {
     setAge(!age)
+  }
+
+  // Step 2
+  const [valueForm, setValueForm] = useState({
+    password: '',
+    confirmPassword: '',
+    cluePassword: ''
+  })
+
+  const handleCheck = (e) => {
+    setValueForm({
+      ...valueForm,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handlePrueba = (e) => {
+    console.log(e)
   }
 
   const [currentStep, setCurrentStep] = useState(1)
@@ -27,7 +57,7 @@ function App () {
       case 1:
         return <Step1 setConfirmAge={() => handleChange()} age={age}/>
       case 2:
-        return <Step2 />
+        return <Step2 handleForm={(e) => handleCheck(e)} setFinalValidation={(e) => handlePrueba(e)} valueForm={valueForm} />
       case 3:
         return <Step3 />
       default:
@@ -37,7 +67,7 @@ function App () {
   const handleClick = (direction) => {
     let newStep = currentStep
     // Si le das a click al boton next y detecta el string suma si no resta
-    direction === 'next' ? newStep++ : newStep--
+    direction === 'next' ? newStep++ : direction === 'back' && newStep--
     // Comprueba si es esta dentro de los limites
     newStep > 0 && newStep <= steps.length && setCurrentStep(newStep)
   }
@@ -50,7 +80,7 @@ function App () {
       <main >
         <div className="App-content">
         <Stepper steps={steps} currentStep={currentStep} />
-          <div className='steps1-container'>
+          <div className='steps-container'>
             {displayStep(currentStep)}
           </div>
           <StepperControl
@@ -58,6 +88,7 @@ function App () {
           currentStep={currentStep}
           steps={steps}
           age={age}
+          finalValidation={finalValidation}
           />
         </div>
       </main>
