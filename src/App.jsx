@@ -1,3 +1,5 @@
+
+// import { createPassword } from '../../../services/api/Service.js'
 import { useState, useEffect } from 'react'
 import './App.scss'
 import './styles/Steps.scss'
@@ -9,10 +11,20 @@ import Step2 from './components/steps/Step2'
 import Step3 from './components/steps/Step3'
 
 function App () {
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault()
+  //   try {
+  //     await createPassword(event)
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
+
   const [finalValidation, setFinalValidation] = useState()
   useEffect(() =>
     setFinalValidation(() => {
       if (valueForm.password === valueForm.confirmPassword && valueForm.cluePassword.length > 1 && valueForm.cluePassword.length < 255) {
+        // handleSubmit(valueForm)
         return true
       } else {
         return false

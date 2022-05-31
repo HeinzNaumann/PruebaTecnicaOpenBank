@@ -83,7 +83,7 @@ const Step2 = ({ handleForm, valueForm }) => {
 export default Step2
 
 Step2.propTypes = {
-
+  handleForm: PropTypes.any,
   valueForm: PropTypes.object
 
 }

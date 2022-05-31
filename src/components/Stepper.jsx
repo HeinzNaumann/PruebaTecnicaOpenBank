@@ -2,6 +2,7 @@
 import PropTypes from 'prop-types'
 import { useEffect, useRef, useState } from 'react'
 import '../styles/Stepper.scss'
+
 const Stepper = ({ steps, currentStep }) => {
   const [newStep, setNewStep] = useState([])
   const stepsRef = useRef()
@@ -55,7 +56,6 @@ const Stepper = ({ steps, currentStep }) => {
     const current = updateStep(currentStep - 1, stepsRef.current)
     setNewStep(current)
   }, [steps, currentStep])
-
   const stepsDisplay = newStep.map((step, index) => {
     return (
       <div

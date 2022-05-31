@@ -1,6 +1,6 @@
 
-@import "styles/base";
-@import "/src/styles/mixins.scss";
+@import "./styles/base";
+@import "./styles/mixins.scss";
 
 .App {
     &-logo{
@@ -10,6 +10,9 @@
     padding: 1rem 4rem;
     @include mobile{
       padding: 1rem 1.2rem;
+  }
+  a{
+    text-decoration: none;
   }
     h2{
       color: $secondary-color;
