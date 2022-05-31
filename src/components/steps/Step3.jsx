@@ -1,6 +1,8 @@
 
 import '../../styles/Steps3.scss'
+import { useTranslation } from 'react-i18next'
 const Step3 = () => {
+  const { t } = useTranslation('global')
   return (
       <div className="success-container">
         <div className="wrapper">
@@ -25,14 +27,14 @@ const Step3 = () => {
         </div>
 
         <div className="congratulations">
-          ¡Enhorabuena!
+        {t('step3.congratulations')}
         </div>
         <div className="createdAccount">
-          Tu cuenta a sido creada
+        {t('step3.your_acount_has_been_create')}
         </div>
         <a href="/">
           <button className="restart">
-            Cerrar
+          {t('step3.close')}
           </button>
         </a>
       </div>

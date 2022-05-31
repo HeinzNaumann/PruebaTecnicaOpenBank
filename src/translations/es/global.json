@@ -1,0 +1,34 @@
+{
+    "generics":{
+        "new_password": "Nueva contraseña",
+        "create_password": "Crear contraseña",
+        "realizate": "Realizado",
+        "back": "Atras",
+        "next": "siguiente",
+        "confirm": "confirmar"
+    },
+    "step1": {
+        "Create-your-password-manager": "Crea tu password manager",
+        "save-your-password": "Guarda aqui todas tus contraseñas, datos o cualquier información, olvida las notas de papel y las aplicaciones protegidas.",
+        "create_your_master_pass": "Crea tu clave maestra: solo tú podras acceder a tus secretos con ella.",
+        "how_it_works": "Cómo funciona",
+        "in_the_first_position": "En primer lugar, debes crear una contraseña diferente para sus pertenencias electróninicas. No podrás recuperar tu contraseña, así que recuérdala bien.",
+        "what_data_you_can_safe": "Qué datos pouedes guardar",
+        "for_example": "Por ejemplo, el número de tu targeta el PIN y el PUK de tu teléfono móvi, el número de serie de alguno de tus dispositivos o cualquier información que necesites tener en lugar seguro.",
+        "to_continue": "Para poder continuar es necesario que confirmes que eres mayor de 18 años y que aceptas que tratemos tus datos según nuestras politicas de privacidad."
+
+    },
+    "step2": {
+        "configurate_your_password": "Configurador de contraseña",
+        "password": "Contraseña",
+        "confirm_password": "Confirma tu contraseña",
+        "Clue_of_password": "Contraseña debe tener entre 8 y 24 caracteres, una mayuscula y un número para poder continuar",
+        "alert_password_rules": "Contraseña debe tener entre 8 y 24 caracteres, una mayuscula y un número para poder continuar",
+        "alert_equal_password": "Contraseña no es igual que la anterior"
+    },
+    "step3": {
+        "congratulations": "¡Enhorabuena!",
+        "your_acount_has_been_create": "Tu cuenta a sido creada",
+        "close": "Cerrar"
+    }
+}

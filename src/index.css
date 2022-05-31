@@ -16,6 +16,15 @@ header{
   padding: 40px 50px 10px 20px;
 }
 
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header button{
+  margin-left: 5px;
+}
+
 .algo span{
   font-size: 0.8rem;
   color: red;

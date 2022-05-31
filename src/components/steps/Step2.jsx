@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import '../../styles/Steps2.scss'
 import Failures from '../Failures'
+import { useTranslation } from 'react-i18next'
 // eslint-disable-next-line react/prop-types
 const Step2 = ({ handleForm, valueForm }) => {
   const { password, confirmPassword, cluePassword } = valueForm
@@ -37,12 +38,12 @@ const Step2 = ({ handleForm, valueForm }) => {
       setValidationMaxCluePasswords(false)
     }
   }, [cluePassword])
-
+  const { t } = useTranslation('global')
   return (
     <div className='form-container'>
-      <h3>Configura tu password</h3>
+      <h3>{t('step2.configurate_your_password')}</h3>
       <form className='form-password'>
-        <label htmlFor='password'>Contraseña</label>
+        <label htmlFor='password'>{t('step2.password')}</label>
           <input
           name='password'
           id='password'
@@ -51,8 +52,8 @@ const Step2 = ({ handleForm, valueForm }) => {
           onChange={e => handleForm(e)}
           className={`${validationPassword && 'failures'}`}
           />
-          <span>{validationPassword && <Failures><span>Contraseña debe tener entre 8 y 24 caracteres, una mayuscula y un número para poder continuar</span></Failures>}</span>
-          <label htmlFor='confirmPassword'>Confirma Contraseña</label>
+          <span>{validationPassword && <Failures><span>{t('step2.alert_password_rules')}</span></Failures>}</span>
+          <label htmlFor='confirmPassword'>{t('step2.confirm_password')}</label>
           <input
           name='confirmPassword'
           id='confirmPassword'
@@ -61,8 +62,8 @@ const Step2 = ({ handleForm, valueForm }) => {
           onChange={e => handleForm(e)}
           className={`${validationEqualPassword && 'failures'}`}
           />
-          <span>{validationEqualPassword && <Failures><span>Contraseña no es igual que la anterior</span></Failures>}</span>
-          <label htmlFor='cluePassword'>Pista de contraseña (Añade una palabra o una frase para acordarte de tu contraseña)</label>
+          <span>{validationEqualPassword && <Failures><span>{t('step2.alert_password_rules')}</span></Failures>}</span>
+          <label htmlFor='cluePassword'>{t('step2.Clue_of_password')}</label>
           <textarea
           name='cluePassword'
           id='cluePassword'

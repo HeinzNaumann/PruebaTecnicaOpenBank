@@ -1,0 +1,34 @@
+{
+    "generics":{
+        "new_password": "New password",
+        "create_password": "Create password",
+        "realizate": "Finished",
+        "back": "Back",
+        "next": "Next",
+        "confirm": "Confirm"
+    },
+    "step1": {
+        "Create-your-password-manager": "Create your password manager",
+        "save-your-password": "Save all your passwords, data or any information here, forget about paper notes and protected apps.",
+        "create_your_master_pass": "Create your master key: only you can access your secrets with it.",
+        "how_it_works": "How it works",
+        "in_the_first_position": "First, you need to create a different password for your electronic belongings. You won’t be able to recover your password, so remember it well.",
+        "what_data_you_can_safe": "What data can you save",
+        "for_example": "For example, your target number, the PIN and PUK of your mobile phone, the serial number of any of your devices, or any information you need to keep safe.",
+        "to_continue": "In order to continue, you must confirm that you are over 18 years of age and that you agree to our processing of your data in accordance with our privacy policies."
+
+    },
+    "step2": {
+        "configurate_your_password": "Configurate your password",
+        "password": "Password",
+        "confirm_password": "Confirm your password",
+        "Clue_of_password": "Password Track (Add a word or phrase to remember your password)",
+        "alert_password_rules": "Password must be between 8 and 24 characters, a uppercase and a number to continue",
+        "alert_equal_password": "Password is not the same as the previous one"
+    },
+    "step3": {
+        "congratulations": "Congratulations!",
+        "your_acount_has_been_create": "Your account has been created",
+        "close": "Close"
+    }
+}

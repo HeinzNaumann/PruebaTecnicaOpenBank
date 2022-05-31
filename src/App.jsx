@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import './App.scss'
 import './styles/Steps.scss'
+import { useTranslation } from 'react-i18next'
 import Logo from './assets/img/logo_openbank.png'
 import Stepper from './components/Stepper'
 import StepperControl from './components/StepperControl'
@@ -19,7 +20,7 @@ function App () {
   //     console.log(err)
   //   }
   // }
-
+  const { t, i18n } = useTranslation('global')
   const [finalValidation, setFinalValidation] = useState()
   useEffect(() =>
     setFinalValidation(() => {
@@ -59,9 +60,9 @@ function App () {
 
   const [currentStep, setCurrentStep] = useState(1)
   const steps = [
-    'Nueva contraseña',
-    'Crear contraseña',
-    'Realizado'
+    `${t('generics.new_password')}`,
+    `${t('generics.create_password')}`,
+    `${t('generics.realizate')}`
   ]
 
   const displayStep = (step) => {
@@ -86,8 +87,12 @@ function App () {
 
   return (
     <>
-      <header>
+      <header className='header'>
         <img src={Logo} alt="Logo OpenBank" height="27px" width="147px" />
+        <div>
+          <button onClick={() => i18n.changeLanguage('es')}>Es</button>
+          <button onClick={() => i18n.changeLanguage('en')}>En</button>
+        </div>
       </header>
       <main >
         <div className="App-content">
