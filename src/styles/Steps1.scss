@@ -1,5 +1,5 @@
 @import "./base";
-
+@import "./mixins.scss";
 
 
 .steps {
@@ -13,8 +13,12 @@
             grid-template-columns: 1fr 1fr;
             gap: 50px;
             margin: 40px 50px 39px 50px;
+            @include mobile{
+                grid-template-columns: 1fr;
+            }
         }
         .checkbox{
+            margin-top: 20px;
             display: flex;
         }   
     }

@@ -12,7 +12,7 @@ const Step1 = ({ setConfirmAge, age }) => {
           <p>Guarda aqui todas tus contraseñas, datos o  cualquier información, olvida las notas de papel y las aplicaciones protegidas.</p>
         </div>
         <div>
-        <img src={image2} width='150px' height='150px' alt="Logo password Manager" ></img>
+        <img src={image2} width='190px' height='150px' alt="Logo password Manager" ></img>
           <p>Crea tu clave maestra: solo tú podras acceder a tus secretos con ella.</p>
         </div>
       </div>

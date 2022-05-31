@@ -1,5 +1,5 @@
 @import "./base";
-
+@import "./mixins.scss";
 
 .stepper {
     display: flex;
@@ -66,6 +66,10 @@
         line-height: 1rem/* 16px */;
         font-weight: 500;
         text-transform: uppercase;
+        @include mobile{
+            font-size: 0.5rem;
+            width:5rem;
+        }
         &-true{
            color: $secondary-color;
         }

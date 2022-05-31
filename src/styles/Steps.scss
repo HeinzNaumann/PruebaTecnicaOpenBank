@@ -1,5 +1,5 @@
 @import "./base";
-
+@import "./mixins.scss";
 
 
 .steps {
@@ -11,6 +11,10 @@
         margin: 0 auto;
         padding: 10px 40px;
         min-height: 500px;
+        @include mobile{
+            grid-template-columns: 1fr;
+            padding: 70px 0px;
+        }
       
     }
   

@@ -12,7 +12,7 @@ function App () {
   const [finalValidation, setFinalValidation] = useState()
   useEffect(() =>
     setFinalValidation(() => {
-      if (valueForm.password === valueForm.confirmPassword && valueForm.cluePassword.length > 1) {
+      if (valueForm.password === valueForm.confirmPassword && valueForm.cluePassword.length > 1 && valueForm.cluePassword.length < 255) {
         return true
       } else {
         return false
@@ -47,9 +47,9 @@ function App () {
 
   const [currentStep, setCurrentStep] = useState(1)
   const steps = [
-    'New Password',
-    'Create Password',
-    'Success'
+    'Nueva contraseña',
+    'Crear contraseña',
+    'Realizado'
   ]
 
   const displayStep = (step) => {

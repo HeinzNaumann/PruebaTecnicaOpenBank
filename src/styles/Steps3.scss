@@ -1,0 +1,59 @@
+@import "./base";
+
+.steps {
+    &-container{
+        .success-container{
+            width: 80%;
+            margin:0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .congratulations{
+              font-size: 2rem;
+              margin-top: 0.4rem;
+              font-weight: 600;
+              text-transform: uppercase;
+              color: $primary-color;
+          }
+          .createdAccount{
+            font-size: 1.2rem;
+            margin-top: 0.4rem;
+            font-weight: 600;
+            color: $secondary-color;
+          }
+          a{
+              margin-top: 10px;
+          }
+          button.restart{
+            margin-top: 10px;
+            border: 1px solid #002B45;
+            background-color: #002b45;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            padding: 14px 26px;
+            color: white;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            width: 97px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+          }
+          button.restart:hover{
+            cursor: pointer;
+            
+        }
+          
+    }
+  
+  }
+  

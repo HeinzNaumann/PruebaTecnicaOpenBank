@@ -1,4 +1,5 @@
 @import "./base";
+@import "./mixins.scss";
 
 
 
@@ -7,12 +8,16 @@
         .form-container{
             width: 80%;
             margin:0 auto;
+           
             .form-password{
                 display: flex;
                 flex-direction: column;
                 margin: 0 auto;
                 width: 80%;
                 margin-top: 5rem;
+                @include mobile{
+                    margin-top: 2rem;
+                }
             }
             label{
                 font-size: 0.8rem;
