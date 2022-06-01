@@ -62,7 +62,7 @@ const Step2 = ({ handleForm, valueForm }) => {
           onChange={e => handleForm(e)}
           className={`${validationEqualPassword && 'failures'}`}
           />
-          <span>{validationEqualPassword && <Failures><span>{t('step2.alert_password_rules')}</span></Failures>}</span>
+          <span>{validationEqualPassword && <Failures><span>{t('step2.alert_equal_password')}</span></Failures>}</span>
           <label htmlFor='cluePassword'>{t('step2.Clue_of_password')}</label>
           <textarea
           name='cluePassword'

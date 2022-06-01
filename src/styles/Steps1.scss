@@ -18,9 +18,17 @@
             }
         }
         .checkbox{
+            min-width: 15px;
             margin-top: 20px;
             display: flex;
-        }   
+        } 
+        input[type="checkbox"] {
+            min-width: 15px;
+            margin-bottom: 10px;
+            appearance: checkbox;
+            box-sizing: border-box;
+            
+            }
     }
   
   }
